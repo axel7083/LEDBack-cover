@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.custom.ledcover">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="com.sec.android.cover.ledback.LED_BACK_SDK_SERVICE" />
+    <uses-permission android:name="com.sec.android.diagmonagent.permission.DIAGMON" />
+    <uses-permission android:name="com.sec.android.diagmonagent.permission.PROVIDER" />
+    <uses-permission android:name="com.samsung.android.app.tips.permission.USE_INTENT_SERVICE" />
+    <uses-permission android:name="com.samsung.android.bixby.service.permission.BIND_TEXT_SERVICE" />
+    <uses-permission android:name="com.samsung.android.bixby.service.permission.BIND_IMAGE_SERVICE" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.AdvancedActivity"></activity>
+        <activity android:name=".activities.ApplicationsActivity" />
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".services.NotificationListener"
+            android:label="LedBackCoverNotifications"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

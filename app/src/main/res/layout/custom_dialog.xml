@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/custom_dialog_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/dialogIcon"
+            android:layout_width="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_height="wrap_content"
+            android:text="Application name"
+            android:textStyle="bold"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_marginHorizontal="15dp"
+        android:id="@+id/radioDialog"
+        android:paddingHorizontal="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/none">
+
+        <RadioButton
+            android:id="@+id/none"
+            android:paddingStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/radio_separation"
+            android:text="None" />
+
+        <RadioButton
+            android:id="@+id/smile"
+            android:paddingStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/radio_separation"
+            android:text="Smile" />
+
+        <RadioButton
+            android:id="@+id/heart"
+            android:paddingStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/radio_separation"
+            android:text="Heart" />
+
+        <RadioButton
+            android:id="@+id/bird"
+            android:paddingStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/radio_separation"
+            android:text="Bird" />
+
+        <RadioButton
+            android:id="@+id/pulse"
+            android:paddingStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/radio_separation"
+            android:text="Pulse" />
+
+        <RadioButton
+            android:id="@+id/infinity"
+            android:paddingStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/radio_separation"
+            android:text="Infinity" />
+
+        <RadioButton
+            android:id="@+id/pet_blob"
+            android:paddingStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/radio_separation"
+            android:text="Pet Blob" />
+
+        <RadioButton
+            android:id="@+id/dog"
+            android:paddingStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/radio_separation"
+            android:text="Dog" />
+
+        <RadioButton
+            android:id="@+id/elephant"
+            android:paddingStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/radio_separation"
+            android:text="Elephant" />
+
+        <RadioButton
+            android:id="@+id/gift_box"
+            android:paddingStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/radio_separation"
+            android:text="Gift box" />
+
+        <RadioButton
+            android:id="@+id/beer_mug"
+            android:paddingStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/radio_separation"
+            android:text="Beer mug" />
+    </RadioGroup>
+
+
+
+    <LinearLayout
+        android:layout_marginHorizontal="@dimen/side_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="10dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/btn_no"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:background="@android:color/transparent"
+            android:clickable="true"
+            android:textColor="@color/arsenic"
+            android:layout_marginEnd="5dp"
+            android:text="Cancel"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

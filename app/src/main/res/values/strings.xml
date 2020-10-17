@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Custom LEDBack Cover</string>
+
+
+    <!-- Strings related to the Alert Dialog -->
+    <string name="notification_listener_service">"Notification Listener Service"</string>
+    <string name="notification_listener_service_explanation">"For the app to work you need to enable the Notification Listener Service. Enable it now?"</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="main_title">LEDBack Cover Notification</string>
+    <string name="advanced_title">Advanced settings</string>
+    <string name="warningAdvanced">This section require higher privilege. The functions used directly interface with the case using NfcAdapter. You need to grant WRITE_SECURE_SETTINGS to com.custom.ledcover to gain full access, if you do not know how to do that, this section is not for you.</string>
+
+</resources>

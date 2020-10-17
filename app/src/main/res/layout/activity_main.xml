@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".activities.MainActivity">
+
+    <TextView
+        android:text="@string/main_title"
+        android:textSize="20dp"
+        android:textColor="@color/arsenic"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="20dp"
+        android:id="@+id/alertCVMain"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="25dp"
+        android:elevation="0dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="#328EE5"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/alertDescriptionMain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/side_margin"
+                android:textColor="@color/white"
+                android:layout_marginVertical="10dp"
+                android:layout_weight="1"/>
+
+            <ImageView
+                android:id="@+id/alertCloseMain"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:padding="3dp"
+                android:layout_marginEnd="@dimen/side_margin"
+                android:src="@drawable/close_button"
+                android:layout_marginVertical="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackground"
+                app:tint="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:text="Settings"
+        android:textSize="13dp"
+        android:textColor="@color/grey"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="@dimen/side_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="25dp"
+        android:elevation="0dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:text="Notification Listener"
+                    android:textSize="18dp"
+                    android:textColor="@color/arsenic"
+                    android:layout_marginStart="@dimen/side_margin"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/activatedSwitch"
+                    android:checked="true"
+                    android:layout_marginEnd="@dimen/side_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/side_margin"
+                android:background="@color/silver"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <TextView
+                    android:text="Only light up when facedown"
+                    android:textSize="18dp"
+                    android:textColor="@color/arsenic"
+                    android:layout_marginStart="@dimen/side_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="The accelerometer will be used to determine if the device is facedown or not (May increase the battery consumption)"
+                        android:textSize="13dp"
+                        android:textColor="@color/grey"
+                        android:layout_marginStart="@dimen/side_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/accelerometerSwitch"
+                    android:layout_marginEnd="@dimen/side_margin"
+                    android:layout_width="wrap_content"
+                    android:checked="true"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/side_margin"
+                android:background="@color/silver"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:text="Animation time"
+                        android:textSize="18dp"
+                        android:textColor="@color/arsenic"
+                        android:layout_marginStart="@dimen/side_margin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:text="It represents in milliseconds the time the LED icons will be visible."
+                        android:textSize="13dp"
+                        android:textColor="@color/grey"
+                        android:layout_marginStart="@dimen/side_margin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/animationTime"
+                    android:layout_marginHorizontal="@dimen/side_margin"
+                    android:layout_width="wrap_content"
+                    android:hint="5000"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:layout_height="50dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:text="Manage applications"
+        android:textSize="13dp"
+        android:textColor="@color/grey"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="@dimen/side_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="25dp"
+        android:elevation="0dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/openApplications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:text="Applications"
+                    android:textSize="18dp"
+                    android:textColor="@color/arsenic"
+                    android:layout_marginStart="@dimen/side_margin"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:text="Testing area"
+        android:textSize="13dp"
+        android:textColor="@color/grey"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="@dimen/side_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="25dp"
+        android:elevation="0dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/openAdvanced"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:text="Advanced Settings"
+                    android:textSize="18dp"
+                    android:textColor="@color/arsenic"
+                    android:layout_marginStart="@dimen/side_margin"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--<androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        app:cardCornerRadius="25dp"
+        android:elevation="0dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:text="MoodLight"
+                    android:textSize="18dp"
+                    android:textColor="@color/arsenic"
+                    android:layout_marginStart="@dimen/side_margin"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:checked="false"
+                    android:layout_marginEnd="@dimen/side_margin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/side_margin"
+                android:background="@color/silver"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:text="Show icons"
+                    android:textSize="18dp"
+                    android:textColor="@color/arsenic"
+                    android:layout_marginStart="@dimen/side_margin"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <Spinner
+                    android:id="@+id/iconsSpinner"
+                    android:layout_marginHorizontal="@dimen/side_margin"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/side_margin"
+                android:background="@color/silver"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:text="Camera Timer"
+                    android:textSize="18dp"
+                    android:textColor="@color/arsenic"
+                    android:layout_marginStart="@dimen/side_margin"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+
+                <Spinner
+                    android:id="@+id/cameraTimerSpinner"
+                    android:layout_marginHorizontal="@dimen/side_margin"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:spinnerMode="dropdown"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView> -->
+</LinearLayout >
